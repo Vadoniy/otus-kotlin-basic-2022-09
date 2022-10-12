@@ -1,3 +1,6 @@
+# otus-kotlin-basic-2022-09
+Homework repository at Otus Kotlin course
+
 HomeTask 1:
 - Create Kotlin project, add to git with code example.
 
