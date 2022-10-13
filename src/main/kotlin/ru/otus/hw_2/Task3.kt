@@ -1,19 +1,23 @@
 package ru.otus.hw_2
 
+import java.math.BigDecimal
 import java.math.RoundingMode
-import java.util.*
 import kotlin.math.sqrt
 
 fun main() {
     println("Enter A")
 
-    val inputA = Scanner(System.`in`)
-    val a = inputA.nextInt()
+    val a = readIntInput()
 
     println("Enter B")
-    val inputB = Scanner(System.`in`)
-    val b = inputB.nextInt()
-    val diagonal = sqrt((a*a + b*b).toFloat()).toBigDecimal().setScale(3, RoundingMode.HALF_UP)
+
+    val b = readIntInput()
+    val diagonal = calculateDiagonal(a, b)
 
     println(diagonal)
+}
+
+fun calculateDiagonal(squareSideA: Int, squareSideB: Int): BigDecimal {
+    return sqrt((squareSideA * squareSideA + squareSideB * squareSideB).toFloat()).toBigDecimal()
+        .setScale(3, RoundingMode.HALF_UP)
 }
