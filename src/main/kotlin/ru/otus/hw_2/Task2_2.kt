@@ -1,5 +1,7 @@
 package ru.otus.hw_2
 
+import ru.otus.utils.readIntInput
+
 fun main() {
 
     val daysInYear = 360
