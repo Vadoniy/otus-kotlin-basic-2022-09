@@ -1,5 +1,6 @@
 package ru.otus.hw_2
 
+import ru.otus.utils.readIntInput
 import java.math.BigDecimal
 import java.math.RoundingMode
 import kotlin.math.sqrt
