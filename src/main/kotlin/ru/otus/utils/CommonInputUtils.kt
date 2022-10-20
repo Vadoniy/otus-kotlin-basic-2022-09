@@ -46,6 +46,11 @@ fun readInputDay(month: Int, year: Int): Int {
     return input
 }
 
+fun readInputLine(): String {
+    val scanner = Scanner(System.`in`)
+    return scanner.nextLine()
+}
+
 private fun getMaxMonthLength(month: Int, year: Int): Int {
     if (month == 2 && Year.isLeap(year.toLong())) {
         return LocalDate.of(year, month, 1).month.maxLength()
