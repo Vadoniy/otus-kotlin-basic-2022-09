@@ -10,6 +10,6 @@ fun main() {
 }
 
 fun factorial(input: Int): Int {
-    if (input == 1) return 1
+    if (input in 0..1) return 1
     return input * factorial(input - 1)
 }
