@@ -22,3 +22,11 @@ HomeTask 3:
    error message should appear.
 2) Input is whole prime number X < 100. Convert it to Roman number.
 3) Input consists of 3 natural numbers - sides of triangle. Define type of triangle: right, obtuse, acute.
+
+HomeTask 4:
+
+- 3 subtasks:
+
+1) Is input a palindrome? Checking is in separate function, output is true/false.
+2) Write the function that counts factorial of the input. Factorial is a separate function.
+3) Input is Int - amount of stages of an isosceles triangle. Write the function that draws the triangle of stars.
