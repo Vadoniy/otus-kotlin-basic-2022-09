@@ -30,3 +30,16 @@ HomeTask 4:
 1) Is input a palindrome? Checking is in separate function, output is true/false.
 2) Write the function that counts factorial of the input. Factorial is a separate function.
 3) Input is Int - amount of stages of an isosceles triangle. Write the function that draws the triangle of stars.
+
+HomeTask 5:
+
+- 3 subtasks:
+
+1) Input is 4 integers. Write a method, that returns the minimum of them.
+2) Input is 4 integers: x1, x2, y,1, у2 (-10000<x1,x2,y,1,у2<10000). Write a method, that returns the real number of
+   type double - length of a segment with ends in points (x1,y1) и (x2,y2).
+3) Write a method that validates a password. Password should be pretty complex and match next requirements:
+   - Length minimum 6 symbols
+   - At least 1 digit
+   - At list 1 capital letter
+   - Not allowed 3 identical symbols in a row

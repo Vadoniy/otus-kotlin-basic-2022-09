@@ -51,6 +51,19 @@ fun readInputLine(): String {
     return scanner.nextLine()
 }
 
+fun readInputIntArray(min: Int, max: Int = Int.MAX_VALUE): List<Int> {
+    val scanner = Scanner(System.`in`)
+    val input = scanner.nextLine()
+    val inputArray = input.split(' ').map { it.toInt() }
+
+    if (inputArray.size < min || inputArray.size > max) {
+        println("Wrong input, please, enter not less than $min and not more than $max numbers")
+        return readInputIntArray(min)
+    }
+
+    return inputArray
+}
+
 private fun getMaxMonthLength(month: Int, year: Int): Int {
     if (month == 2 && Year.isLeap(year.toLong())) {
         return LocalDate.of(year, month, 1).month.maxLength()
