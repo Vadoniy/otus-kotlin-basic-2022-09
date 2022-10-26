@@ -51,19 +51,46 @@ fun readInputLine(): String {
     return scanner.nextLine()
 }
 
-fun readInputIntArray(min: Int, max: Int = Int.MAX_VALUE): List<Int> {
-    val scanner = Scanner(System.`in`)
-    val input = scanner.nextLine()
-    val inputArray = """\d+""".toRegex().findAll(input)
+fun readInputIntArray(
+    minAmountOfElements: Int,
+    maxAmountOfElements: Int = Int.MAX_VALUE,
+    minElementValue: Int = Int.MIN_VALUE,
+    maxElementValue: Int = Int.MAX_VALUE
+): List<Int> {
+    val input = readInputLine()
+    val inputArray = "-?\\d+".toRegex().findAll(input)
         .map { it.value.toInt() }
         .toList()
 
-    if (inputArray.size < min || inputArray.size > max) {
-        println("Wrong input, please, enter not less than $min and not more than $max numbers")
-        return readInputIntArray(min)
+    if (!validateAmountOfElements(inputArray, minAmountOfElements, maxAmountOfElements)
+        || !validateElements(inputArray, minElementValue, maxElementValue)
+    ) {
+        return readInputIntArray(minAmountOfElements, maxAmountOfElements, minElementValue, maxElementValue)
     }
 
     return inputArray
+}
+
+fun validateAmountOfElements(inputArray: List<Any>, minAmountOfElements: Int, maxAmountOfElements: Int): Boolean {
+    if (inputArray.size < minAmountOfElements || inputArray.size > maxAmountOfElements) {
+        println(
+            "Wrong input, please, enter not less than $minAmountOfElements and not more than " +
+                    "$maxAmountOfElements numbers"
+        )
+        return false
+    }
+    return true
+}
+
+fun validateElements(elements: List<Int>, minElementValue: Int, maxElementValue: Int): Boolean {
+    elements.forEach {
+        if (it !in minElementValue + 1 until maxElementValue) {
+            println("Input should be in range from $minElementValue to $maxElementValue: $it")
+            return false
+        }
+    }
+
+    return true
 }
 
 private fun getMaxMonthLength(month: Int, year: Int): Int {

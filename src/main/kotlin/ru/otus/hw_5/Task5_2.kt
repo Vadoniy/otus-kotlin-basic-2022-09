@@ -5,10 +5,14 @@ import ru.otus.utils.squareNumber
 import kotlin.math.sqrt
 
 fun main() {
+    val minInputValue = -10000
+    val maxInputValue = 10000
+    val minAmountOfElements = 2
+    val maxAmountOfElements = 2
     println("Enter 2 numbers X1 X2 with a space")
-    val inputX = readInputIntArray(2, 2)
+    val inputX = readInputIntArray(minAmountOfElements, maxAmountOfElements, minInputValue, maxInputValue)
     println("Enter 2 numbers Y1 Y2 with a space")
-    val inputY = readInputIntArray(2, 2)
+    val inputY = readInputIntArray(minAmountOfElements, maxAmountOfElements, minInputValue, maxInputValue)
 
     println(countSegmentLength(inputX, inputY))
 }
