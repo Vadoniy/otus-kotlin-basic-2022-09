@@ -54,7 +54,9 @@ fun readInputLine(): String {
 fun readInputIntArray(min: Int, max: Int = Int.MAX_VALUE): List<Int> {
     val scanner = Scanner(System.`in`)
     val input = scanner.nextLine()
-    val inputArray = input.split(' ').map { it.toInt() }
+    val inputArray = """\d+""".toRegex().findAll(input)
+        .map { it.value.toInt() }
+        .toList()
 
     if (inputArray.size < min || inputArray.size > max) {
         println("Wrong input, please, enter not less than $min and not more than $max numbers")
