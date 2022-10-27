@@ -1,7 +1,7 @@
 package ru.otus.hw_3
 
+import ru.otus.utils.squareNumber
 import java.util.stream.Collectors
-import kotlin.math.pow
 
 enum class TriangleType(var message: String) {
 
@@ -24,8 +24,4 @@ fun resolveTriangleType(diagonal: Int, sides: List<Int>): TriangleType {
         diagonalSquare < sidesSum -> TriangleType.ACUTE
         else -> TriangleType.RIGHT
     }
-}
-
-fun squareNumber(input: Int): Double {
-    return input.toDouble().pow(2)
 }
