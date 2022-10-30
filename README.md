@@ -39,7 +39,20 @@ HomeTask 5:
 2) Input is 4 integers: x1, x2, y,1, у2 (-10000<x1,x2,y,1,у2<10000). Write a method, that returns the real number of
    type double - length of a segment with ends in points (x1,y1) и (x2,y2).
 3) Write a method that validates a password. Password should be pretty complex and match next requirements:
-   - Length minimum 6 symbols
-   - At least 1 digit
-   - At list 1 capital letter
-   - Not allowed 3 identical symbols in a row
+    - Length minimum 6 symbols
+    - At least 1 digit
+    - At list 1 capital letter
+    - Not allowed 3 identical symbols in a row
+
+HomeTask 6:
+
+- 6 subtasks:
+
+1) Input is an integer N. Then input is N numbers space separated, each element is in range 0..100000. Output is this
+   numbers from min to max
+2) Input is 2 immutable arrays, implement 3 operations:
+    - print combined array with all elements from the first one and then from the second one;
+    - print the array, that contains elements from first array, that are not contained in the second array;
+    - print crossed array, that contains all elements from the first and the second ones simultaneously;
+3) Input is array, that contains at least one integer. Output is three numbers via space: minimal, average and maximum
+   from the array.
