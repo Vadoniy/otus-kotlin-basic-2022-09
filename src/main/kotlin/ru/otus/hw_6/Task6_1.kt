@@ -9,7 +9,8 @@ fun main() {
     val amountOfElements = readIntInput()
     println("Entter elements separated with spaces")
     val array = readInputIntArray(
-        minAmountOfElements = amountOfElements, maxAmountOfElements = amountOfElements,
+        minAmountOfElements = amountOfElements,
+        maxAmountOfElements = amountOfElements,
         maxElementValue = maxElementValue
     )
     println(array.asSequence().sorted().joinToString(" "))

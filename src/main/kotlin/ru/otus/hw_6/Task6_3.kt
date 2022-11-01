@@ -7,9 +7,9 @@ fun main() {
     val input = readInputIntArray(1)
     val result = mutableListOf<Int>()
 
-    result.add(input.asSequence().min())
+    result.add(input.min())
     result.add(input.average().toInt())
-    result.add(input.asSequence().max())
+    result.add(input.max())
 
     println(result.joinToString(" "))
 }
