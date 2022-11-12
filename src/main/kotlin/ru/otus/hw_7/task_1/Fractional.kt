@@ -1,14 +1,14 @@
-package ru.otus.hw_7
+package ru.otus.hw_7.task_1
 
 import kotlin.math.abs
 
-class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, denominatorInput: Int) {
+class Fractional(private val isPositive: Boolean = true, numeratorInput: Long, denominatorInput: Long) {
 
-    val numerator: Int
-    val denominator: Int
+    val numerator: Long
+    val denominator: Long
 
     init {
-        if (denominatorInput == 0) {
+        if (denominatorInput == 0L) {
             println("Can't divide by zero")
             throw RuntimeException()
         }
@@ -17,9 +17,9 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
     }
 
     fun plus(fractional: Fractional): Fractional {
-        return if (numerator == 0) {
+        return if (numerator == 0L) {
             fractional
-        } else if (fractional.numerator == 0) {
+        } else if (fractional.numerator == 0L) {
             this
         } else {
             val resultNumerator = sumNumerators(fractional)
@@ -32,9 +32,9 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
     }
 
     fun minus(fractional: Fractional): Fractional {
-        return if (numerator == 0) {
+        return if (numerator == 0L) {
             fractional
-        } else if (fractional.numerator == 0) {
+        } else if (fractional.numerator == 0L) {
             this
         } else {
             val resultNumerator = diffNumerators(fractional)
@@ -50,7 +50,7 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
         }
     }
 
-    private fun diffNumerators(fractional: Fractional): Int {
+    private fun diffNumerators(fractional: Fractional): Long {
         return if (denominator != fractional.denominator) {
             (numerator * fractional.denominator) * negateIfNotPositive(this) - (fractional.numerator * denominator) * negateIfNotPositive(
                 fractional
@@ -60,7 +60,7 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
         }
     }
 
-    private fun sumNumerators(fractional: Fractional): Int {
+    private fun sumNumerators(fractional: Fractional): Long {
         return if (denominator != fractional.denominator) {
             (numerator * fractional.denominator) * negateIfNotPositive(this) + (fractional.numerator * denominator) * negateIfNotPositive(
                 fractional
@@ -70,7 +70,7 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
         }
     }
 
-    private fun resolveDenominator(fractional: Fractional): Int {
+    private fun resolveDenominator(fractional: Fractional): Long {
         return if (denominator != fractional.denominator) {
             multiplyDenominators(fractional)
         } else {
@@ -78,7 +78,7 @@ class Fractional(private val isPositive: Boolean = true, numeratorInput: Int, de
         }
     }
 
-    private fun multiplyDenominators(fractional: Fractional): Int {
+    private fun multiplyDenominators(fractional: Fractional): Long {
         return abs(fractional.denominator * denominator)
     }
 

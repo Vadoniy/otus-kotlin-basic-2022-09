@@ -1,4 +1,4 @@
-package ru.otus.hw_7
+package ru.otus.hw_7.task_1
 
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
@@ -9,7 +9,7 @@ internal class FractionalTest {
     @Test
     fun notZeroDenominator() {
         assertThrows<Exception> {
-            Fractional(true, kotlin.random.Random.nextInt(), 0)
+            Fractional(true, kotlin.random.Random.nextLong(), 0)
         }
     }
 
