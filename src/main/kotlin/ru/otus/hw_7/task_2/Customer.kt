@@ -2,11 +2,9 @@ package ru.otus.hw_7.task_2
 
 import ru.otus.hw_7.task_2.order.OrderItem
 
-class Customer(var name: String, var address: String?) {
+class Customer(var name: String, var address: String? = "No address") {
 
-    constructor(name: String) : this(name, null)
-
-    val orders = mutableListOf<OrderItem>()
+    private val orders = mutableListOf<OrderItem>()
 
     fun calcPrice(): Int {
         println("Customer.calcPrice()")
@@ -21,5 +19,9 @@ class Customer(var name: String, var address: String?) {
     fun addItem(item: OrderItem) {
         orders.add(item)
         println("Customer.addItem()")
+    }
+
+    fun itemsList(): List<OrderItem> {
+        return orders
     }
 }
