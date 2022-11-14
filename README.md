@@ -1,7 +1,9 @@
 # otus-kotlin-basic-2022-09
+
 Homework repository at Otus Kotlin course
 
 HomeTask 1:
+
 - Create Kotlin project, add to git with code example.
 
 HomeTask 2:
@@ -51,8 +53,13 @@ HomeTask 6:
 1) Input is an integer N. Then input is N numbers space separated, each element is in range 0..100000. Output is this
    numbers from min to max
 2) Input is 2 immutable arrays, implement 3 operations:
-    - print combined array with all elements from the first one and then from the second one;
-    - print the array, that contains elements from first array, that are not contained in the second array;
-    - print crossed array, that contains all elements from the first and the second ones simultaneously;
+   - print combined array with all elements from the first one and then from the second one;
+   - print the array, that contains elements from first array, that are not contained in the second array;
+   - print crossed array, that contains all elements from the first and the second ones simultaneously;
 3) Input is array, that contains at least one integer. Output is three numbers via space: minimal, average and maximum
    from the array.
+
+HomeTask 7:
+
+- Write the class, that describes fractional numbers (for example 1/2, 3/5 etc). Implement addition and subtraction
+  methods of objects.
