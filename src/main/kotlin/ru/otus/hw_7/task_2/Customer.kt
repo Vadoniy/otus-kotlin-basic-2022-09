@@ -2,7 +2,7 @@ package ru.otus.hw_7.task_2
 
 import ru.otus.hw_7.task_2.order.OrderItem
 
-class Customer(var name: String, var address: String? = "No address") {
+class Customer(var name: String, var address: String = "No address") {
 
     private val orders = mutableListOf<OrderItem>()
 
