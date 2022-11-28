@@ -63,3 +63,10 @@ HomeTask 7:
 
 - Write the class, that describes fractional numbers (for example 1/2, 3/5 etc). Implement addition and subtraction
   methods of objects.
+
+HomeTask 8:
+
+- There is a UML diagram with text explanation. Implement its structure preserving inheritance, nesting and
+  abstractness.
+  It should be noted that some entities should be interfaces and some - abstract classes. Logic in methods should not be
+  implemented, it is enough to make them compiled
