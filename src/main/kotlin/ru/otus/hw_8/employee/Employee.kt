@@ -3,7 +3,7 @@ package ru.otus.hw_8.employee
 import ru.otus.hw_8.unit.Department
 
 
-class Employee(var position: String, override var name: String, override var surname: String) : Man() {
+data class Employee(var position: String, override var name: String, override var surname: String) : Man() {
 
     lateinit var department: Department
     lateinit var idCard: IdCard
