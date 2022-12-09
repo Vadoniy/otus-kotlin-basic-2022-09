@@ -70,3 +70,9 @@ HomeTask 8:
   abstractness.
   It should be noted that some entities should be interfaces and some - abstract classes. Logic in methods should not be
   implemented, it is enough to make them compiled
+
+HomeTask 9:
+
+- Design the class architecture and implement all the required methods for the classes: Point, Line, Vector, BrokenCurve
+  in accordance with description
+  https://docs.google.com/document/d/1ZzZLILaIEJIZt7e7mqg-nJHK9Fmi6jx-hQvf3SNlP6M/edit#heading=h.k3uujdvm4yt
