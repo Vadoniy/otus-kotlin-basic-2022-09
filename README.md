@@ -76,3 +76,11 @@ HomeTask 9:
 - Design the class architecture and implement all the required methods for the classes: Point, Line, Vector, BrokenCurve
   in accordance with description
   https://docs.google.com/document/d/1ZzZLILaIEJIZt7e7mqg-nJHK9Fmi6jx-hQvf3SNlP6M/edit#heading=h.k3uujdvm4yt
+
+HomeWork 10:
+
+- 3 subtasks:
+
+1) Implement function that consumes lambda function F and positive integer N. Function F has to start exactly N times.
+2) Implement function (MAIN_F) that consumes lambda function F and returns the same result like F. Function MAIN_F has
+   to be kind of wrapper for any other function and has to log time of start and end of input-function F.
