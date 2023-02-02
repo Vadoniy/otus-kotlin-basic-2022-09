@@ -84,3 +84,7 @@ HomeWork 10:
 1) Implement function that consumes lambda function F and positive integer N. Function F has to start exactly N times.
 2) Implement function (MAIN_F) that consumes lambda function F and returns the same result like F. Function MAIN_F has
    to be kind of wrapper for any other function and has to log time of start and end of input-function F.
+
+HomeWork 11:
+
+- SqlDslUnitTest.class is given. Make it compilable and runnable. All tests must pass successfully.
