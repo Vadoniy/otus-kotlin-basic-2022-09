@@ -1,6 +1,8 @@
 package ru.otus.hw_11.where
 
-abstract class ComparisonOperator {
+interface ComparisonOperator {
+
+    val comparisonOperatorList: MutableList<ComparisonOperator>
 
     infix fun String.nonEq(value: Any?) {
         addComparisonOperatorToQuery(NonEq(this, value))
@@ -18,23 +20,8 @@ abstract class ComparisonOperator {
         addComparisonOperatorToQuery(And().apply(block))
     }
 
-    protected abstract fun addComparisonOperatorToQuery(comparisonOperator: ComparisonOperator)
-
-//    infix fun String.nonEq(value: Any?) {
-//        addOperand(WhereNonEq(this, value))
-//    }
-
-//    fun and(block: WhereCondition.() -> Unit) {
-//        addOperand(WhereOperatorAnd().apply(block))
-//    }
-//
-//    fun or(block: WhereCondition.() -> Unit) {
-//        addOperand(WhereOperatorOr().apply(block))
-//    }
-
-//    infix fun String.eq(value: Any?) {
-//        addOperand(WhereEq(this, value))
-//    }
-//
+    fun addComparisonOperatorToQuery(comparisonOperator: ComparisonOperator) {
+        throw RuntimeException("Not implemented yet")
+    }
 
 }

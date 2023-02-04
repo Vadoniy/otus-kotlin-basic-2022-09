@@ -3,9 +3,9 @@ package ru.otus.hw_11.where
 import ru.otus.utils.wrapWithBrackets
 
 open class ComparisonOperatorFacade(
-    private val comparisonOperatorList: MutableList<ComparisonOperator> = mutableListOf(),
+    override val comparisonOperatorList: MutableList<ComparisonOperator> = mutableListOf(),
     open val currentComparisonOperator: String = ""
-) : ComparisonOperator() {
+) : ComparisonOperator {
 
     override fun addComparisonOperatorToQuery(comparisonOperator: ComparisonOperator) {
         comparisonOperatorList.add(comparisonOperator)

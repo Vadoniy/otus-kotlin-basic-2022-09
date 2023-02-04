@@ -1,10 +1,8 @@
 package ru.otus.hw_11.where
 
-class Eq(private val column: String, private val value: Any?) : ComparisonOperator() {
+class Eq(private val column: String, private val value: Any?) : ComparisonOperator {
 
-    override fun addComparisonOperatorToQuery(comparisonOperator: ComparisonOperator) {
-        TODO("Not yet implemented")
-    }
+    override val comparisonOperatorList: MutableList<ComparisonOperator> = ArrayList(0)
 
     override fun toString(): String {
         return when (value) {
